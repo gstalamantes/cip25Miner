@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "fs": "^0.0.1-security",
+    "mysql2": "^3.10.1",
+    "stream-json": "^1.8.0"
+  },
+  "name": "holders",
+  "version": "1.0.0",
+  "main": "holders.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "sudoScientist",
+  "license": "ISC",
+  "description": ""
+}
