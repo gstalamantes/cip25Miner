@@ -2,17 +2,17 @@ const mysql = require('mysql2/promise');
 const fs = require('fs');
 const path = require('path');
 
-const SERVER_URL = "http://<yourKupoIP>";
-const PROGRESS_FILE = path.join(__dirname, 'progress.json');
+const SERVER_URL = "http://<yourKupoIP>";  //Add your Kupo IP address here
+const PROGRESS_FILE = path.join(__dirname, 'progress.json');  //Progress is maintained via this file.  If issues arise, delete this to reset the process from the beginning.
 
-const BATCH_SIZE = 50;
-const MAX_METADATA_LENGTH = 75535; 
+const BATCH_SIZE = 50;        //SQL Batch size- entries will be pushed to SQL after 50 matches are prepared.
+const MAX_METADATA_LENGTH = 75535;  //Metadata size.  If set too low, errors will occur.  Alter to your needs. 
 
 const dbConfig = {
-  host: '<databaseIPaddress>',
-  user: '<dbUsername>',
-  password: 'dbPassword',
-  database: '<dbName>',
+  host: '<databaseIPaddress>',    //Add you SQL IP here
+  user: '<dbUsername>',           //Add you SQL username here
+  password: '<dbPassword>',       //Add you SQL password here
+  database: '<dbName>',           //Add you SQL db/schema name here
   charset: 'utf8mb4' 
 };
 
@@ -65,7 +65,7 @@ async function fetchMetadata(slotNo, transactionId) {
 async function fetchMatches() {
   console.log("Fetching matches from the server...");
   try {
-    const matches = await fetch(`${SERVER_URL}/matches?unspent`);
+    const matches = await fetch(`${SERVER_URL}/matches?unspent`);   //Match URL - By default will pull all matches from index pattern set via Kupo, but can be filtered here.  Refer to Kupo docs for more info
     console.log("Successfully fetched matches from the server.");
     return matches;
   } catch (err) {
