@@ -11,7 +11,7 @@ Requirements:
 2. An instance of Kupo, with the index completed.  The match criteria
    will dictate which transactions will be included in the matches.
 
-3. An SQL server configured with the proper schema/table.  A MySQL file
+3. An SQL server configured with the proper schema/table.  A MySQL model file
    is provided to create the needed table.  Character format is vital,
    as many assets use EMOJIs!  (utf8mb4/utf8mb4_unicode_ci)
 
