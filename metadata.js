@@ -220,7 +220,7 @@ async function main() {
   while (true) {
     if (!firstRun) {
       console.log("Waiting 15 minutes before re-fetching matches...");
-      await new Promise(resolve => setTimeout(resolve, 900000));
+      await new Promise(resolve => setTimeout(resolve, 900000));  //Process will restart to grab new matches 15 minutes after completing.  Change based on your needs.
     } else {
       firstRun = false;
     }
