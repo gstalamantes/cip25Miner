@@ -15,23 +15,22 @@ Requirements:
    is provided to create the needed table.  Character format is vital,
    as many assets use EMOJIs!  (utf8mb4/utf8mb4_unicode_ci)
 
-
-=====================================================================
+----------------------------------------------------------------------
 
 Setup:
 
 First, clone the repo folder and open a Terminal window.  Then run:
 
 
-cd cip25Miner 
+```cd cip25Miner```
 
-npm i
+```npm i```
 
 
 After the dependencies install, run the script by executing the following:
 
 
-node metadata.js
+```node metadata.js```
 
 
 The script will pull the matches based on the pattern set on the Kupo index. 
@@ -40,8 +39,7 @@ tokens, as the project's title implies, use the match criteria "{721}".
 For example, an instance running Kupo via Docker (recommended) that indexes
 all 721 tagged tokens would be the following:
 
-docker run -p 1442:1442 -it --name containerNameHere -v $PWD/dbFolderName:/db  cardanosolutions/kupo:v2.8.0 --ogmios-host ogmiosIpAddress --ogmios-port 1337 --since 23068793.69c44ac1dda2ec74646e4223bc804d9126f719b1c245dadc2ad65e8de1b276d7
- --match '{721}' --workdir /db --host 0.0.0.0 --port 1442
+```docker run -p 1442:1442 -it --name containerNameHere -v $PWD/dbFolderName:/db  cardanosolutions/kupo:v2.8.0 --ogmios-host ogmiosIpAddress --ogmios-port 1337 --since 23068793.69c44ac1dda2ec74646e4223bc804d9126f719b1c245dadc2ad65e8de1b276d7 --match '{721}' --workdir /db --host 0.0.0.0 --port 1442```
 
 Consult Kupo documentation for all the ways Kupo can be used to index the blockchain below:
 https://cardanosolutions.github.io/kupo/
