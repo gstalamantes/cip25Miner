@@ -5,15 +5,23 @@ A script for pushing metadata from Kupo index matches to a SQL db.
 
 Requirements:
 
-1. A fully synced node or access to one.  Local nodes are preferred
-   due to data sizes, which vary based upon match criteria.
+1. A fully synced Cardano node or access to one.  Local nodes are preferred
+   due to data sizes, which vary based upon match criteria.  If you are unsure where
+   to start, Ogmios via Docker is recommended, as it is highly automated.  See below
+   for more info.
+   https://ogmios.dev/getting-started/docker/
 
-2. An instance of Kupo, with the index completed.  The match criteria
+3. An instance of Kupo, with the index completed.  The match criteria
    will dictate which transactions will be included in the matches.
+   Again, Docker is recommended, and provides an image to get you up
+   quickly.
+   https://hub.docker.com/r/cardanosolutions/kupo
 
-3. An SQL server configured with the proper schema/table.  A MySQL model file
+5. An SQL server configured with the proper schema/table.  A MySQL model file
    is provided to create the needed table.  Character format is vital,
-   as many assets use EMOJIs!  (utf8mb4/utf8mb4_unicode_ci)
+   as many assets use EMOJIs!  (utf8mb4/utf8mb4_unicode_ci).
+   MySQL Community Edition can be downloaded free from Oracle.
+   https://dev.mysql.com/downloads/
 
 ----------------------------------------------------------------------
 
