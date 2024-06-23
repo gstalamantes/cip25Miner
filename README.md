@@ -19,20 +19,20 @@ Requirements:
 
 Setup:
 
-First, clone the repo folder and open a Terminal window.  Then run:
+First, open a terminal window to clone the repo folder, then change directories to the repo folder.
 
+```git clone https://github.com/gstalamantes/cip25Miner.git```
 
 ```cd cip25Miner```
 
-```npm i```
+Install the dependencies.
 
+```npm i```
 
 After the dependencies install, run the script by executing the following:
 
-
 ```node metadata.js```
-
-
+ 
 The script will pull the matches based on the pattern set on the Kupo index. 
 This is not set by default, and must be defined. To index for all CIP25 
 tokens, as the project's title implies, use the match criteria "{721}".  
